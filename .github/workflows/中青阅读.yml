@@ -3,11 +3,11 @@ name: 中青阅读
 on:
   workflow_dispatch:
   schedule:
-     - cron: '10 6,13,20 * * *'
+     - cron: '10 8-22/3 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest    
-    if: github.event.repository.owner.id == github.event.sender.id
+   ## if: github.event.repository.owner.id == github.event.sender.id
     steps:
       - name: Checkout
         run: |
